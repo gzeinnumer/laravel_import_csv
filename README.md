@@ -5,9 +5,10 @@
 
 - Clone this repo
 - Make Database `laravel_import_csv`
+- Import data from `laravel_import_csv.sql`
 - Setting `.env`
-- Run `composer install` interminal
-- Run `php artisan serve`
+- Run `composer install` in terminal
+- Run `php artisan serve` in terminal
 - Convert file `datasv2.xlsx` to `datav2.csv`
 
 ![](preview_3.png)
