@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "27276fe1-c1ea-4158-aa30-553bf2a344a1",
+		"name": "laravel_import_csv",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5649240"
+	},
+	"item": [
+		{
+			"name": "import",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploaded_file",
+							"type": "file",
+							"src": "/Users/mfadlizein/Downloads/datasv2.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/upload-content",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload-content"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
