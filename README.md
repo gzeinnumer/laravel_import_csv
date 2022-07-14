@@ -2,7 +2,6 @@
  
 [source](https://medium.com/technology-hits/how-to-import-a-csv-excel-file-in-laravel-d50f93b98aa4)
 
-
 - Clone this repo
 - Make Database `laravel_import_csv`
 - Import data from `laravel_import_csv.sql`
@@ -21,6 +20,11 @@
 - Result
 
 ![](preview_2.png)
+
+- For UI
+```
+http://localhost:8000/upload
+```
 
 ---
 
