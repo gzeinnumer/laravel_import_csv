@@ -10,6 +10,12 @@ use Illuminate\Http\Response;
 
 class PlayerController extends Controller
 {
+
+    public function upload()
+    {
+        return view('upload');
+    }
+
     public function uploadContent(Request $request)
     {
         $file = $request->file('uploaded_file');
