@@ -51,23 +51,27 @@ class PlayerController extends Controller
                 $i++;
             }
             fclose($file); //Close after reading
+            DB::beginTransaction();
+
             $j = 0;
             // return $importData_arr;
             foreach ($importData_arr as $importData) {
-                $name = $importData[1]; //Get user names
                 $j++;
                 try {
-                    DB::beginTransaction();
+                    if ($importData[1] == "") {
+                        continue;
+                    }
+                    $name = $importData[1]; //Get user names
                     PlayerModels::create([
                         'name' => $importData[1],
                     ]);
                     //Send Email
-                    DB::commit();
                 } catch (\Exception $e) {
                     throw $e;
                     DB::rollBack();
                 }
             }
+            DB::commit();
             return response()->json([
                 'message' => "$j records successfully uploaded"
             ]);
