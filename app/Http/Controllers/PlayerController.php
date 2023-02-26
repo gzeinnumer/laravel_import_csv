@@ -63,9 +63,7 @@ class PlayerController extends Controller
                     }
                     $name = $importData[1]; //Get user names
                     PlayerModels::create([
-                        'id' => $importData[0],
                         'name' => $importData[1],
-                        'flag_active' => $importData[2],
                     ]);
                     //Send Email
                 } catch (\Exception $e) {
